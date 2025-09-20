@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
     // Admin-only routes
     Route::middleware('role:admin')->group(function () {
         Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/admin/my-notes', [AdminController::class, 'myNotes'])->name('admin.my-notes');
     });
 });
 
